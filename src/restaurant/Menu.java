@@ -21,6 +21,7 @@ public class Menu {
         }
         lastUpdated = LocalDateTime.now();
     }
+
     public void removeMenuItem(String menuItemDescription){
         for(int i = 0; i < appetizers.size(); i++){
             if(appetizers.get(i).getDescription().toLowerCase().contains(menuItemDescription)){
