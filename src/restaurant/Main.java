@@ -6,14 +6,13 @@ public class Main {
     public static void main(String[] args){
         MenuItem cheesecake = new MenuItem(2.99,"Cheesecake", "dessert");
         MenuItem steak = new MenuItem(15.99, "Steak", "main course", true);
-        System.out.println(cheesecake);
 
         Menu restaurantMenu = new Menu();
         restaurantMenu.addMenuItem(cheesecake);
         restaurantMenu.addMenuItem(steak);
 
         boolean exit = false;
-        System.out.println(restaurantMenu);
+
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to the restraurant!");
         do{
@@ -54,7 +53,7 @@ public class Main {
                 String description = input.nextLine().toLowerCase();
                 System.out.println(restaurantMenu.search(description));
             } else if(selection == 5){
-                exit = false;
+                exit = true;
             } else {
                 System.out.println("Invalid Input: Try Again");
             }
