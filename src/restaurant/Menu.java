@@ -1,10 +1,7 @@
 package restaurant;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-
-
 
 public class Menu {
     private ArrayList<MenuItem> appetizers = new ArrayList<>();
@@ -42,6 +39,7 @@ public class Menu {
         }
         lastUpdated = LocalDateTime.now();
     }
+
     @Override
     public String toString(){
         String displayList = "***Appetizers***";
@@ -54,6 +52,7 @@ public class Menu {
 
         return displayList;
     }
+
     public String displayCategory(ArrayList category){
         String displayCategoryList="";
         if(category==appetizers){
@@ -83,7 +82,6 @@ public class Menu {
                 displayCategoryList += "\nCheck back later!";
             }
         }
-
         return displayCategoryList;
     }
 
@@ -113,14 +111,9 @@ public class Menu {
         } else {
             return "Item not found";
         }
-
-
-
     }
 
-
-
-
+//Getters and Setters
     public ArrayList<MenuItem> getAppetizers(){
         return this.appetizers;
     }

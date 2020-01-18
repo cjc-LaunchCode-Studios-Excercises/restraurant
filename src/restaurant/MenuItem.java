@@ -3,13 +3,11 @@ package restaurant;
 import java.time.LocalDate;
 import java.time.Period;
 
-
 public class MenuItem {
     private Double price;
     private String description;
     private String category;
     private Boolean newStatus;
-
 
     public MenuItem(Double price, String description, String category, Boolean newStatus){
         this.price = price;
@@ -22,11 +20,11 @@ public class MenuItem {
     public MenuItem(Double price, String description, String category){
         this(price, description, category, false);
     }
+
     @Override
     public String toString(){
         return  this.description + " " + this.price + " " + this.category + " " + this.newStatus;
     }
-
 
     public String toStringWithNew(){
         if(newStatus){
@@ -41,15 +39,12 @@ public class MenuItem {
        if (toBeCompared == this) {
            return true;
        }
-
        if (toBeCompared == null) {
            return false;
        }
-
        if (toBeCompared.getClass() != getClass()) {
            return false;
        }
-
        MenuItem theMenuItem = (MenuItem) toBeCompared;
        if (theMenuItem.getCategory() == getCategory()) {
            if (theMenuItem.getDescription() == getDescription()) {
@@ -61,7 +56,6 @@ public class MenuItem {
            return false;
        }
    }
-
 
     public static String setCategoryUsingNum (Integer num){
         String categoryString = "";
@@ -81,8 +75,7 @@ public class MenuItem {
         return categoryString;
     }
 
-
-
+//Getters and Setters
     public Double getPrice(){
         return this.price;
     }

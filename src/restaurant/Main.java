@@ -1,15 +1,12 @@
 package restaurant;
 
 import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class Main {
     public static void main(String[] args){
         MenuItem cheesecake = new MenuItem(2.99,"Cheesecake", "dessert");
         MenuItem steak = new MenuItem(15.99, "Steak", "main course", true);
         System.out.println(cheesecake);
-
-
 
         Menu restaurantMenu = new Menu();
         restaurantMenu.addMenuItem(cheesecake);
@@ -35,8 +32,6 @@ public class Main {
 
                 System.out.println("Please enter price: ");
                 Double price = Double.parseDouble(input.nextLine());
-
-
 
                 Integer categoryNum;
                 String categoryString = "";
